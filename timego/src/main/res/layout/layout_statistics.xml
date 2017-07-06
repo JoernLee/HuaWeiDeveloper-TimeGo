@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/royalblue"
+        android:id="@+id/first_line">
+
+        <ImageView
+            android:id="@+id/txt_S_return"
+            android:layout_height="20dp"
+            android:layout_width="50dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="15dp"
+            android:onClick="onClick"
+            android:src="@drawable/back_joern" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColorHint="@color/white"
+            android:gravity="center"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+
+            android:id="@+id/top_name"
+            android:hint="@string/menu_statistics"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/txt_statistics_change"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="80dp"
+            android:gravity="center|left"
+            android:text="切换"
+            android:onClick="onClick"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/txt_statistics_select"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:gravity="center|left"
+            android:text="选择"
+            android:onClick="onClick"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:text="今天"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:id="@+id/show_date"/>
+
+            <Button
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/backleft_joern"
+                android:onClick="onClick"
+                android:id="@+id/btn_pro"
+                android:layout_marginStart="21dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentStart="true" />
+
+            <Button
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:background="@drawable/right_3_joern"
+                android:onClick="onClick"
+                android:id="@+id/btn_next"
+                android:layout_marginEnd="20dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true" />
+
+
+        </RelativeLayout>
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/spread_pie_chart"
+            android:layout_width="300dp"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="370dp"
+           >
+        </com.github.mikephil.charting.charts.PieChart>
+        <com.github.mikephil.charting.charts.HorizontalBarChart
+            android:id="@+id/spread_bar_chart"
+            android:layout_width="350dp"
+            android:layout_marginTop="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="370dp"
+            android:visibility="invisible"
+            >
+        </com.github.mikephil.charting.charts.HorizontalBarChart>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

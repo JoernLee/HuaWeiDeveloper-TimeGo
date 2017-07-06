@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/royalblue"
+        android:id="@+id/first_line">
+
+        <ImageView
+            android:id="@+id/txt_teach_return"
+            android:layout_height="22dp"
+            android:layout_width="50dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:onClick="onClick"
+            android:src="@drawable/back_joern" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColorHint="@color/white"
+            android:gravity="center"
+            android:layout_marginRight="50dp"
+            android:layout_gravity="end"
+            android:id="@+id/top_name"
+            android:hint="@string/menu_teaching"/>
+    </LinearLayout>
+    <!--<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    xmlns:tools="http://schemas.android.com/tools"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+        <ViewFlipper
+            android:id="@+id/teach_flipper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="10dp"
+            android:flipInterval="2000" >
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="300dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/back_joern"/>
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="300dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/backleft_joern"/>
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="300dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_about"/>
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="300dip"
+                android:scaleType="fitXY"
+                android:src="@drawable/icon_about2"/>
+        </ViewFlipper>
+
+    </RelativeLayout>-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/teach_web"/>
+    </ScrollView>
+
+
+</LinearLayout>

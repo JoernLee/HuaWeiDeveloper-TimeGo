@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:id="@+id/activity_main"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:paddingBottom="0dp"
+              android:paddingLeft="0dp"
+              android:paddingRight="0dp"
+              android:paddingTop="0dp"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/royalblue"
+        android:id="@+id/first_line">
+
+        <ImageView
+            android:layout_height="20dp"
+            android:layout_width="50dp"
+            android:id="@+id/menu"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:onClick="onClick"
+            android:src="@drawable/list_joern" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="end"
+            android:layout_marginRight="50dp"
+            android:id="@+id/top_name"
+            android:text="@string/top"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:id="@+id/second_line">
+
+        <LinearLayout
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:id="@+id/second_left1_date"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:weightSum="2">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:gravity="end|center"
+                    android:textColor="@color/royalblue"
+                    android:layout_marginRight="3dp"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/today_month"
+                    android:textSize="20sp"
+                    android:textStyle="normal"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:gravity="end|center"
+                    android:layout_marginRight="3dp"
+                    android:layout_gravity="right"
+                    android:textColor="@color/steelblue"
+                    android:id="@+id/today_date"
+                    android:textSize="22sp"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="26dp"
+                    android:gravity="end|center"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginRight="3dp"
+                    android:layout_gravity="top"
+                    android:textColor="@color/royalblue"
+                    android:textSize="20sp"
+                    android:id="@+id/today_day" />
+
+                    <TextView
+                        android:id="@+id/left_line_hour"
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="62dp"
+                        android:layout_height="100dp"
+                        android:text="00"
+                        android:textSize="22sp"
+                        android:textStyle=""
+                        android:layout_marginRight="0dp"
+                        android:gravity="bottom|right"
+                        android:layout_gravity="bottom|right"
+                        android:textColor="@color/steelblue" />
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="20dp"
+                            android:layout_height="87dp"
+                            android:text=":"
+                            android:layout_marginTop="0dp"
+                            android:textSize="22sp"
+                            android:textStyle="bold"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textColor="@color/steelblue" />
+                        <TextView
+                            android:id="@+id/left_line_minute"
+                            android:layout_width="40dp"
+                            android:layout_height="87dp"
+                            android:text="00"
+                            android:layout_gravity="center|right"
+                            android:gravity="right|center"
+                            android:textSize="22sp"
+                            android:layout_marginRight="0dp"
+                            android:textColor="@color/steelblue" />
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                android:layout_weight="1">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_marginRight="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="6.5dp"
+                    android:id="@+id/up_hand"
+                    android:layout_gravity="top"
+                    android:background="@color/royalblue"/>
+                <TextView
+                    android:id="@+id/home_using_level"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="没有使用"
+                    android:layout_marginLeft="7dp"
+                    android:layout_marginTop="7dp"
+                    android:gravity="center"
+                    android:textSize="20sp"
+                    android:textColor="@color/steelblue"
+                    android:textStyle="normal"/>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_horizontal"
+            android:id="@+id/hour_linelayout">
+
+            <!--原： <ListView> -->
+            <ListView
+                android:id="@+id/time_hour"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:dividerHeight="0.0dip"
+                android:fadingEdge="none"
+                android:cacheColorHint="#FFF4F4F4"
+
+
+
+
+
+
+                />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout android:orientation="vertical"
+            android:layout_width="105dp"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:gravity="center_horizontal">
+
+            <!--原： <ListView> -->
+            <ListView
+                android:id="@+id/time_minute"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:dividerHeight="0.0dip"
+                android:fadingEdge="none"
+                android:cacheColorHint="#FFF4F4F4"
+                android:divider="@null"
+                android:scrollbars="none"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:weightSum="1">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/icon_image"
+                        android:layout_width="65dp"
+                        android:layout_marginTop="200dp"
+                        android:layout_height="60dp"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/ic_launcher"
+                        android:background="@color/white"/>
+                    <TextView
+                        android:id="@+id/right_icon_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="TimeGo"
+                        android:textColor="@color/black"
+                        android:textSize="14sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <View
+                    android:id="@+id/right_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="6.5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_gravity="center"
+                    android:src="@mipmap/ic_launcher"
+                    android:background="@color/royalblue"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/using_time"
+                        android:gravity="center"
+                        android:layout_marginTop="7dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/steelblue"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/sum"
+                            tools:text="62"
+                            android:textStyle="bold"
+                            android:gravity="right"
+                            android:layout_marginTop="0dp"
+                            android:textSize="20sp"
+                            android:textColor="@color/steelblue"/>
+                        <TextView
+                            android:layout_weight="0.5"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="min"
+                            android:textStyle="normal"
+                            android:gravity="left"
+                            android:layout_marginTop="0dp"
+                            android:textSize="16sp"
+                            android:textColor="@color/steelblue"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/decide_time"
+                    android:onClick="onClick"
+                    android:background="@color/royalblue"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="140dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/locate"
+                    android:textColor="@color/white"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

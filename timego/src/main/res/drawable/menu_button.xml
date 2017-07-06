@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <selector xmlns:android="http://schemas.android.com/apk/res/android">
+        <item android:state_pressed="true" android:color="@color/red"/>/>
+        <item android:state_focused="true" android:color="#40E0D0"/>
+        <item android:color="#00f" /><!-- 按下时按钮的变化 -->
+    </selector>
+</selector>
+

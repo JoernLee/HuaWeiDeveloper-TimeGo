@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/royalblue"
+        android:id="@+id/first_line">
+
+        <ImageView
+            android:id="@+id/txt_ANC_return"
+            android:layout_height="20dp"
+            android:layout_width="50dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:onClick="onClick"
+            android:src="@drawable/back_joern" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColorHint="@color/white"
+            android:gravity="center"
+            android:layout_marginRight="50dp"
+            android:layout_gravity="end"
+            android:id="@+id/top_name"
+            android:hint="分析"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textview_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="最早使用手机的时间："
+                android:textColor="#101010"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="bottom"
+                    android:text="你："
+
+                    android:textColor="#101010"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="bottom"
+                    android:text="07:30:00"
+                    android:textColor="@color/dodgerblue"
+
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="60dp"
+                    android:gravity="bottom"
+                    android:text="全国："
+                    android:textColor="#101010"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="bottom"
+                    android:text="08:15:00"
+                    android:textColor="@color/dodgerblue"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/textview_border"
+                android:orientation="horizontal">
+
+
+                <com.example.timego.DrawableHorizontalButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:includeFontPadding="false"
+                    android:drawableLeft="@drawable/pinglun"
+                    android:background="@drawable/textview_border"
+                    android:layout_weight="1"
+                    android:text="评论" />
+                <com.example.timego.DrawableHorizontalButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:includeFontPadding="false"
+                    android:drawableLeft="@drawable/zan"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_border"
+                    android:text="赞" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textview_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="最晚使用手机的时间："
+                android:textColor="#101010"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="bottom"
+                    android:text="你："
+
+                    android:textColor="#101010"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="bottom"
+                    android:text="22:35:00"
+                    android:textColor="@color/dodgerblue"
+
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="60dp"
+                    android:gravity="bottom"
+                    android:text="全国："
+                    android:textColor="#101010"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="bottom"
+                    android:text="21:15:00"
+                    android:textColor="@color/dodgerblue"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/textview_border"
+                android:orientation="horizontal">
+
+                <com.example.timego.DrawableHorizontalButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:includeFontPadding="false"
+                    android:drawableLeft="@drawable/pinglun"
+                    android:background="@drawable/textview_border"
+                    android:layout_weight="1"
+                    android:text="评论" />
+                <com.example.timego.DrawableHorizontalButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:includeFontPadding="false"
+                    android:drawableLeft="@drawable/zan"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_border"
+                    android:text="赞" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textview_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="平均使用手机的时间："
+                android:textColor="#101010"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="bottom"
+                    android:text="你："
+
+                    android:textColor="#101010"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="bottom"
+                    android:text="5小时15分"
+                    android:textColor="@color/dodgerblue"
+
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="40dp"
+                    android:gravity="bottom"
+                    android:text="全国："
+                    android:textColor="#101010"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="bottom"
+                    android:text="4小时30分"
+                    android:textColor="@color/dodgerblue"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/textview_border"
+                android:orientation="horizontal">
+
+                <com.example.timego.DrawableHorizontalButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:includeFontPadding="false"
+                    android:drawableLeft="@drawable/pinglun"
+                    android:background="@drawable/textview_border"
+                    android:layout_weight="1"
+                    android:text="评论" />
+                <com.example.timego.DrawableHorizontalButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:includeFontPadding="false"
+                    android:drawableLeft="@drawable/zan"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_border"
+                    android:text="赞" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/textview_border"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:text="使用时间最长的应用："
+                android:textColor="#101010"
+                android:textSize="20sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="10dp"
+                    android:gravity="bottom"
+                    android:text="你："
+
+                    android:textColor="#101010"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/weixin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="bottom"
+                    android:text="微信"
+                    android:textColor="@color/dodgerblue"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="64dp"
+                    android:gravity="bottom"
+                    android:text="全国："
+                    android:textColor="#101010"
+                    android:textSize="20sp" />
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:src="@drawable/qq" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="bottom"
+                    android:text="QQ"
+                    android:textColor="@color/dodgerblue"
+                    android:textSize="20sp" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/textview_border"
+                android:orientation="horizontal">
+
+                <com.example.timego.DrawableHorizontalButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:includeFontPadding="false"
+                    android:drawableLeft="@drawable/pinglun"
+                    android:background="@drawable/textview_border"
+                    android:layout_weight="1"
+                    android:text="评论" />
+                <com.example.timego.DrawableHorizontalButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:includeFontPadding="false"
+                    android:drawableLeft="@drawable/zan"
+                    android:layout_weight="1"
+                    android:background="@drawable/textview_border"
+                    android:text="赞" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

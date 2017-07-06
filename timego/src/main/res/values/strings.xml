@@ -1,0 +1,88 @@
+<resources>
+    <string name="app_name">TimeGo</string>
+    
+    <string name="tv">Menu</string>
+    <string name="top">你的一天</string>
+    <string name="today_month">三 月</string>
+    <string name="today_number">19</string>
+    <string name="today_date">周 日</string>
+    <string name="hour_list">0:00</string>
+    <string name="minute_number">0</string>
+    <string name="using_time">使用时间</string>
+    <!-- 关于 -->
+    <string name="about1">\nTime Go？\n
+    \t\t\t一款自动记录用户每天日常App使用情况的App。让您与手机的交互，数据化可视化，帮助您更高效的面对生活。我们认为一款好的App应该是游戏化，有社会价值并且可创造效益的。Time Go可以帮助您游戏化查看自己与手机App的交互，帮助你更好的了解自己在手机上花费时间去向何处，这非常有趣！我们免费提供了权威的数据分析服务，帮助你更好的规划自己的时间，见证自己的进步。我们的日报和分析功能，也总能给你一些时间上的启示。\n\n
+    企业分析业务？\n
+        \t\t\t我们可预见未来的终端快速变革，并且竞争激烈，如何保证终端产品在市场上赢得先机，精确洞察消费者需求？基于海量用户群大数据信息，我们为企业提供分析业务。比如我们的数据系统显示，用户加强了在手机视频软件上的时间投入，那么我们应该对手机屏幕进行尺寸，显示升级以更好贴合市场。或者用户在晚上拍照的时间开始逐渐增加，那么我们应该对手机的夜间拍照的图像算法及成像曝光等进行优化升级......\n
+        \t\t\t通过数据分析服务帮助企业更好的确定产品的升级优化方向，赢得市场。我们能做的还有很多，这才刚刚开始。\n\n
+        What is about FXer？\n
+        \t\t\t一位来自南京航空航天大学本科生，两位来自河海大学的研究生组成的团队。团队在开发者大赛群中临时组队，历时30天从原型设计到最终开发，完成了Time Go制作。当所有的App在想怎么将用户粘入到手机中时，Time Go想做的是想让用户更好地利用好手机。\n\n
+        开发者名单\n
+        产品经理:\t\t戚耀文\t\t\tZacharyQi@outlook.com\n
+        技术经理:\t\t李嘉昕\t\t\tjoernlee@outlook.com\n
+        技术经理:\t\t陈富东\t\t\tJason_Chen24@outlook.com\n
+    </string>
+    <!--目录 -->
+    <string name="menu_main">你的一天</string>
+    <string name="menu_statistics">使用统计</string>
+    <string name="menu_trend">使用趋势</string>
+    <string name="menu_test">测试</string>
+    <string name="menu_setting">设置</string>
+    <string name="menu_find">发现</string>
+    <string name="menu_teaching">教学</string>
+    <string name="menu_newspaper">日报</string>
+    <string name="menu_data_analyaze">企业大数据分析</string>
+    <string name="menu_user_analyze">生成个性报告</string>
+    <string name="menu_about">关于</string>
+
+    <!--设置相关 -->
+    <string name="settings_right">读取权限</string>
+    <string name="settings_language">语言选择</string>
+    <string name="settings_bluelight">TimeLight</string>
+    <string name="settings_system">系统设置</string>
+    <string name="settings_extra">功能设置</string>
+    <string name="settings_parents">家长模式</string>
+    <string name="now_language">中文</string>
+
+    <string name="en_language">English</string>
+    <string name="cn_language">中文</string>
+
+    <string name="locate">定位当前</string>
+
+    <string name="settings_language_title">语言选择</string>
+
+    <string name="settings_open">开</string>
+    <string name="settings_close">关</string>
+
+    <!-- 使用程度 -->
+    <string name="no_using">没有\t使用</string>
+    <string name="light_using_1">轻度\t使用Ⅰ</string>
+    <string name="light_using_2">轻度\t使用Ⅱ</string>
+    <string name="medium_using_1">中度\t使用Ⅰ</string>
+    <string name="medium_using_2">中度\t使用Ⅱ</string>
+    <string name="weight_using">重度\t使用</string>
+
+    <!-- 蓝牙相关 -->
+    <string name="ble_not_supported">你的手机不支持BLE</string>
+    <string name="label_data">Data:</string>
+    <string name="label_device_address">设备地址:</string>
+    <string name="label_state">State:</string>
+    <string name="no_data">No data</string>
+    <string name="connected">已连接</string>
+    <string name="disconnected">已断开连接</string>
+    <string name="title_devices">BLE 设备扫描</string>
+    <string name="error_bluetooth_not_supported">你的手机不支持蓝牙</string>
+    <string name="unknown_device">未知设备</string>
+    <string name="unknown_characteristic">未知特征值</string>
+    <string name="unknown_service">未知服务</string>
+
+    <!-- Menu items -->
+    <string name="menu_connect">Connect</string>
+    <string name="menu_disconnect">Disconnect</string>
+    <string name="menu_scan">Scan</string>
+    <string name="menu_stop">Stop</string>
+    <string name="device_rssi">rssi信号</string>
+    <string name="text_detail">detail</string>
+
+
+</resources>

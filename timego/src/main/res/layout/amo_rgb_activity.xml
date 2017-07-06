@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:colorpicker="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    android:orientation="vertical" >
+
+	<LinearLayout
+	     android:focusable="true" 
+	     android:focusableInTouchMode="true"
+	     android:layout_width="0px"
+	     android:layout_height="0px"
+	    />
+		      
+    
+    
+    
+    <LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"  >
+    
+	<LinearLayout android:orientation="horizontal" android:layout_width="match_parent" android:layout_height="wrap_content"  >    
+
+     	<LinearLayout android:orientation="vertical" android:layout_width="match_parent" android:layout_height="wrap_content"  >
+		    <ToggleButton
+		         android:id="@+id/togglebutton_onoff"
+		         android:layout_width="fill_parent"
+		         android:layout_height="wrap_content"         
+				android:checked="true"
+		     	android:textOff="关灯"
+		     	android:textOn="开灯"   
+		     	android:textSize="16sp"  
+		     	android:textStyle="bold"   
+		     />		    
+		    
+		    <ToggleButton
+		        android:id="@+id/togglebutton_flash"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"         
+				android:checked="false"
+		     	android:textOff="律动关"
+		     	android:textOn="律动开"   
+		     	android:textSize="16sp"  
+		     	android:textStyle="bold"   
+		     />	  
+		     
+	        <Button
+	            android:id="@+id/button_about"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:textSize="16sp"
+	            android:text="帮助" 
+	            android:textStyle="bold"      
+	        />		    
+		    
+		    
+		 </LinearLayout>         
+	    
+	</LinearLayout>    
+    
+    <TextView
+        android:id="@+id/txt_color"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/color_picker_view"
+        android:layout_centerHorizontal="true"
+     	android:textSize="20sp"  
+     	android:textStyle="bold"   
+     	android:text="当前颜色值：" />
+    
+    
+     <SeekBar
+      	android:id="@+id/seekbar_brightness"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="100"
+        android:progress="100"
+        android:secondaryProgress="100"    
+     	/> 	      	 
+    <TextView
+        android:id="@+id/txt_brightness"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="亮度百分比：100%" />
+ 	
+	<SeekBar
+      	android:id="@+id/seekbar_red"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="50"
+        android:secondaryProgress="255"            
+     	/> 	     	 
+    <TextView
+        android:id="@+id/txt_color_red"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="红色分量：" />        
+    
+ 	<SeekBar
+      	android:id="@+id/seekbar_green"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:max="255"
+        android:progress="50"
+        android:secondaryProgress="255"    
+     	/> 	      	 
+    <TextView
+        android:id="@+id/txt_color_green"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="绿色分量:" />
+    
+    
+       
+ 
+     	
+   	<SeekBar
+      	android:id="@+id/seekbar_blue"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+     	android:max="255"
+        android:progress="50"
+        android:secondaryProgress="255"    
+        />
+    <TextView
+        android:id="@+id/txt_color_blue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="蓝色分量：" />  
+        
+
+    
+    <TextView
+        android:id="@+id/AmoMcu_taobao"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:textColor="#00ff00"
+        android:gravity="center"
+        android:textStyle="bold"      
+        android:text="阿莫单片机科技淘宝店出品\r\ntaobao.AmoMcu.com"     
+        android:textSize="20sp"/>    
+    
+    
+    <!-- 
+    <SurfaceView
+        android:id="@+id/remoteSurfaceView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp" />
+    -->
+         
+	</LinearLayout>
+     	 	
+</RelativeLayout>

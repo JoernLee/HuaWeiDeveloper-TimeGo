@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="hobby">
+        <item>中文</item>
+        <item>English</item>
+    </string-array>
+</resources>

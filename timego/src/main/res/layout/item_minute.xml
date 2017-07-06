@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:background="@color/white"
+        android:layout_marginTop="0dp"
+        android:orientation="horizontal" >
+        <TextView
+            android:id="@+id/minute_number"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:textSize="8sp"
+            android:gravity="right|top"
+            android:text="@string/minute_number"
+            android:textColorHint="@color/black"/>
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="42dp"
+            android:background="@color/white"
+            android:layout_marginTop="0dp"
+            android:orientation="vertical" >
+            <View
+                android:id="@+id/minute_block10s"
+                android:layout_width="80dp"
+                android:layout_height="6dp"
+                android:layout_marginTop="0.5dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="5dp"
+                android:background="#66696969">
+            </View>
+            <View
+                android:id="@+id/minute_block20s"
+                android:layout_width="80dp"
+                android:layout_height="6dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="5dp"
+                android:background="#66696969">
+            </View>
+            <View
+                android:id="@+id/minute_block30s"
+                android:layout_width="80dp"
+                android:layout_height="6dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="5dp"
+                android:background="#66696969">
+            </View>
+            <View
+                android:id="@+id/minute_block40s"
+                android:layout_width="80dp"
+                android:layout_height="6dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="5dp"
+                android:background="#66696969">
+            </View>
+            <View
+                android:id="@+id/minute_block50s"
+                android:layout_width="80dp"
+                android:layout_height="6dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="5dp"
+                android:background="#66696969">
+            </View>
+            <View
+                android:id="@+id/minute_block60s"
+                android:layout_width="80dp"
+                android:layout_height="6.2dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginBottom="0dp"
+                android:layout_marginLeft="5dp"
+                android:background="#66696969">
+            </View>
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

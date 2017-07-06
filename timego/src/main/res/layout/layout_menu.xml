@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:layout_width="260dp"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="40dp"
+            android:layout_height="48dp"
+            android:id="@+id/left_main">
+            <ImageView
+                android:id="@+id/icon_mainmenu"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="12dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_home"/>
+            <TextView
+                android:id="@+id/txt_mainmenu"
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="33dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textStyle=""
+                android:onClick="onClickMenu"
+                android:textColor="#000000"
+                android:text="@string/menu_main"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_height="48dp"
+            android:id="@+id/left_statics">
+            <ImageView
+                android:id="@+id/icon_statistics"
+                android:layout_width="35dp"
+                android:layout_height="23dp"
+                android:layout_marginLeft="13dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_statistics"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="32dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:text="@string/menu_statistics"
+                android:id="@+id/txt_statistics"
+                android:onClick="onClickMenu"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_height="48dp"
+            android:id="@+id/left_trend">
+            <ImageView
+                android:id="@+id/icon_trend"
+                android:layout_width="35dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="13dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_trend"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="32dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:text="@string/menu_trend"
+                android:id="@+id/txt_trend"
+                android:onClick="onClickMenu"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_height="48dp"
+            android:id="@+id/left_newspaper">
+
+            <ImageView
+                android:id="@+id/icon_daily"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="13dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_newspaper"/>
+
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="32dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:text="@string/menu_newspaper"
+                android:id="@+id/txt_daily"
+                android:onClick="onClickMenu"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_height="48dp"
+            android:id="@+id/left_teach">
+            <ImageView
+                android:id="@+id/icon_teach"
+                android:layout_width="35dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="13dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_teach"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="32dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:text="@string/menu_teaching"
+                android:id="@+id/txt_teach"
+                android:onClick="onClickMenu"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_height="48dp"
+            android:id="@+id/left_setting">
+            <ImageView
+                android:id="@+id/icon_setting"
+                android:layout_width="35dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="13dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_setting"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="32dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:text="@string/menu_setting"
+                android:id="@+id/txt_setting"
+                android:onClick="onClickMenu"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_height="48dp"
+            android:weightSum="1"
+            android:id="@+id/left_test">
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="24dp"
+                android:layout_marginLeft="13dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_test"/>
+            <TextView
+                android:layout_width="60dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="32dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:text="@string/menu_test" />
+
+            <ToggleButton
+                android:id="@+id/mTogBtn"
+                android:layout_width="60dp"
+                android:layout_height="48dp"
+                android:background="@android:color/transparent"
+                android:button="@drawable/switch_btn"
+                android:checked="false"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="0dp"
+
+                android:text=""
+                android:textOff=""
+                android:textOn="" />
+
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginTop="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/gray_cc"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/menu_find"
+            android:textColor="#8A000000"
+            android:textSize="14sp"
+            android:textStyle=""
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="12dp"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="8dp"
+            android:layout_height="48dp"
+            android:background="@drawable/textview_left_selector"
+            android:clickable="true"
+            android:id="@+id/left_analyzeU">
+            <ImageView
+                android:id="@+id/icon_analyzeU"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_analyze_user"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="38dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:text="@string/menu_user_analyze"
+                android:id="@+id/txt_analyzeU"
+                android:onClick="onClickMenu"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_height="48dp"
+            android:background="@drawable/textview_left_selector"
+            android:clickable="true"
+            android:id="@+id/left_analyzeC">
+            <ImageView
+                android:id="@+id/icon_analyzeC"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="20dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_analyze_com"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="38dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:text="@string/menu_data_analyaze"
+                android:id="@+id/txt_analyzeC"
+                android:onClick="onClickMenu"/>
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="0dp"
+            android:layout_height="48dp"
+            android:id="@+id/left_about">
+            <ImageView
+                android:id="@+id/icon_about"
+                android:layout_width="35dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="13dp"
+                android:layout_gravity="center"
+                android:src="@drawable/icon_about"/>
+            <TextView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="32dp"
+                android:layout_gravity="center"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:text="@string/menu_about"
+                android:id="@+id/txt_about"
+                android:onClick="onClickMenu"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

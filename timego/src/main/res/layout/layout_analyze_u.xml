@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:background="@color/royalblue"
+        android:id="@+id/first_line">
+
+        <ImageView
+            android:id="@+id/txt_ANU_return"
+            android:layout_height="20dp"
+            android:layout_width="50dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dp"
+            android:onClick="onClick"
+            android:src="@drawable/back_joern" />
+        <TextView
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:textSize="20sp"
+            android:textColorHint="@color/white"
+            android:gravity="center"
+            android:layout_marginRight="0dp"
+            android:layout_gravity="end"
+            android:id="@+id/top_name"
+            android:hint="@string/menu_user_analyze"/>
+        <TextView
+            android:layout_width="50dp"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:id="@+id/jieping"
+            android:onClick="onClick"
+            android:text="分享"
+            android:textSize="14dp"
+            android:textColor="@color/white"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColor="@color/royalblue"
+            android:gravity="center"
+           android:text="TimeGo" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColorHint="@color/black"
+            android:gravity="center"
+            android:text="第 " />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColorHint="@color/black"
+            android:gravity="center"
+            android:id="@+id/numberReport"
+            android:text="48569" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="22sp"
+            android:textColorHint="@color/black"
+            android:gravity="center"
+            android:text=" 号报告" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColorHint="@color/royalblue"
+            android:gravity="center"
+            android:text="我一天花了" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/red"
+            android:id="@+id/time1"
+            android:gravity="center"
+            android:text="5" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColorHint="@color/black"
+            android:gravity="center"
+            android:text="小时在手机上,你敢信？" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColorHint="@color/royalblue"
+            android:gravity="center"
+            android:text="我用的时间最多的APP竟然是" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:id="@+id/analyzeApp"
+            android:text="TimeGO" />
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColorHint="@color/royalblue"
+            android:gravity="center"
+            android:text="玩了" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/red"
+            android:gravity="center"
+            android:id="@+id/time2"
+            android:text="3" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColorHint="@color/royalblue"
+            android:gravity="center"
+            android:text="小时，根本停不下来好吗？" />
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColorHint="@color/royalblue"
+            android:gravity="center"
+            android:text="其它的，静静看图就好啦。。。" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/analyze_chart"
+            android:layout_width="220dp"
+            android:layout_centerHorizontal="true"
+            android:layout_height="240dp"
+            >
+        </com.github.mikephil.charting.charts.PieChart>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColorHint="@color/royalblue"
+            android:gravity="center"
+
+            android:text="诊断结果：" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/royalblue"
+            android:gravity="center"
+            android:id="@+id/type1"
+            android:text="" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColorHint="@color/royalblue"
+            android:gravity="center"
+            android:text="用户类型：" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/royalblue"
+            android:gravity="center"
+            android:id="@+id/type2"
+            android:text="" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/analyzetime"
+        />
+
+
+    </LinearLayout>
+
+</LinearLayout>
