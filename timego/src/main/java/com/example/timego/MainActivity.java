@@ -1502,6 +1502,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 viewPager.setCurrentItem(4);
                 slideMenu.switchMenu();
                 //这里有问题需要修改---06---许多人载入图片时候会闪退
+
+                //TODO newspaper的崩溃--尝试修改图片尺寸或者改变显示方式
                 lvD = (ListView) findViewById(R.id.dailypaper_list);
                 //初始化日报list
                 SimpleAdapter mAdapterDaily = new SimpleAdapter(this, getData(), R.layout.dailypaper_item,
