@@ -184,12 +184,8 @@
                 android:dividerHeight="0.0dip"
                 android:fadingEdge="none"
                 android:cacheColorHint="#FFF4F4F4"
-
-
-
-
-
-
+                android:divider="@null"
+                android:scrollbars="none"
                 />
 
         </LinearLayout>

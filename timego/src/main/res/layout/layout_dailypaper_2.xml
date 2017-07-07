@@ -38,7 +38,9 @@
           android:layout_height="wrap_content"
           android:layout_gravity="center"
           android:scaleX="1.1"
-          android:id="@+id/dailypaper_list"/>
+          android:id="@+id/dailypaper_list"
+          android:divider="@null"
+          android:scrollbars="none"/>
 
 
 
