@@ -1344,6 +1344,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     e.printStackTrace();
                 }
                 break;
+            //主界面的教学按钮
+            case R.id.teaching_button:
+                Intent teachIntent = new Intent(MainActivity.this,TeachActivity.class);
+                startActivity(teachIntent);
+                finish();
             default:
                 break;
         }
@@ -1501,9 +1506,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 imageView3.setImageDrawable(getResources().getDrawable(R.drawable.icon_newspaper2));
                 viewPager.setCurrentItem(4);
                 slideMenu.switchMenu();
-                //这里有问题需要修改---06---许多人载入图片时候会闪退
 
-                //TODO newspaper的崩溃--尝试修改图片尺寸或者改变显示方式
+                // newspaper的崩溃--尝试修改图片尺寸或者改变显示方式 - 0707修复
                 lvD = (ListView) findViewById(R.id.dailypaper_list);
                 //初始化日报list
                 SimpleAdapter mAdapterDaily = new SimpleAdapter(this, getData(), R.layout.dailypaper_item,

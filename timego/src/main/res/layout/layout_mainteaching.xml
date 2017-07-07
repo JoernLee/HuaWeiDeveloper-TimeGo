@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:orientation="horizontal"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:text="（1/6）主界面介绍"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/royalblue"
+            android:textStyle="bold"
+            android:id="@+id/show_date"/>
+
+        <Button
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="@drawable/backleft_joern"
+            android:onClick="onClick"
+            android:id="@+id/btn_teach_pro"
+            android:layout_marginStart="21dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:background="@drawable/right_3_joern"
+            android:onClick="onClick"
+            android:id="@+id/btn_teach_next"
+            android:layout_marginEnd="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/teaching_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:src="@drawable/teaching_main"/>
+
+</LinearLayout>

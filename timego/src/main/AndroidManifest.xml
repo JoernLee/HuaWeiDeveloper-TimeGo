@@ -19,6 +19,7 @@
         </activity>
         <activity android:name="com.example.timego.RgbActivity"/>
         <activity android:name="com.example.timego.DeviceScanActivity"/>
+        <activity android:name="com.example.timego.TeachActivity"/>
         <activity
             android:name="com.example.timego.MainActivity"
             android:configChanges="keyboardHidden|orientation|screenSize">

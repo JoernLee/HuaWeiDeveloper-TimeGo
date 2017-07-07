@@ -161,6 +161,21 @@
                     android:textColor="@color/steelblue"
                     android:textStyle="normal"/>
 
+                <Button
+                    android:id="@+id/teaching_button"
+                    android:onClick="onClick"
+                    android:background="@color/royalblue"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="140dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="7dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="教  学"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"/>
+
             </LinearLayout>
 
 
