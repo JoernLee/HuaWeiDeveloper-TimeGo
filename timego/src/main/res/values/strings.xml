@@ -84,5 +84,12 @@
     <string name="device_rssi">rssi信号</string>
     <string name="text_detail">detail</string>
 
+    <!-- 教学页面 -->
+    <string name="teach_1">(1/5)主界面介绍</string>
+    <string name="teach_2">(2/5)主菜单一览</string>
+    <string name="teach_3">(3/5)权限设置步骤</string>
+    <string name="teach_4">(4/5)统计功能简介</string>
+    <string name="teach_5">(5/5)趋势功能简介</string>
+
 
 </resources>

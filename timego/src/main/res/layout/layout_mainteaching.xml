@@ -13,12 +13,12 @@
             android:layout_height="match_parent"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center"
-            android:text="（1/6）主界面介绍"
+            android:text="@string/teach_1"
             android:gravity="center"
             android:textSize="16sp"
             android:textColor="@color/royalblue"
             android:textStyle="bold"
-            android:id="@+id/show_date"/>
+            android:id="@+id/text_teach_head"/>
 
         <Button
             android:layout_width="22dp"

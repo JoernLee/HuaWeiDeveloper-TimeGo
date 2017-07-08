@@ -1348,7 +1348,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.teaching_button:
                 Intent teachIntent = new Intent(MainActivity.this,TeachActivity.class);
                 startActivity(teachIntent);
-                finish();
             default:
                 break;
         }
