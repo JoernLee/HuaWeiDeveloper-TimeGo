@@ -91,5 +91,12 @@
     <string name="teach_4">(4/5)统计功能简介</string>
     <string name="teach_5">(5/5)趋势功能简介</string>
 
+    <!-- 卫士登陆界面 -->
+    <string name="loginAccount">账号：</string>
+    <string name="inputAccount">请输入您的家长账号</string>
+    <string name="password">密码：</string>
+    <string name="inputPassword">请输入您的密码信息</string>
+    <string name="login">登      陆</string>
+
 
 </resources>

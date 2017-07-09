@@ -180,6 +180,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private WebView webWechart;//日报微信
     private boolean firstOpen = false;
     private int returnWebview = 0;
+    private String loginResult;
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -195,6 +196,34 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     stopTimer();
                 } catch (Exception e) {
                 }
+            }
+        }
+        if (requestCode == 1){
+            if (resultCode == RESULT_OK){
+                loginResult = data.getStringExtra("result_return");
+                //Toast.makeText(MainActivity.this,"账号正确",Toast.LENGTH_SHORT).show();
+                //TODO 列表清空
+                //停止定时器
+                stopTimer();
+                //清空列表
+                DateMain date = new DateMain(0);
+                List<String[]> listHourItem = new LinkedList<>();
+                //-----初始化主界面小时列表----
+                final int hourTopWhiteBlock = 8;
+                final int hourEndWhiteBlock = 8;
+                boolean init = true;
+                listHourItem = date.glideHourDate(init, listHourItem, hourTopWhiteBlock, hourEndWhiteBlock, listHourItem);
+                HourAdapter hourAdapter = new HourAdapter(this, listHourItem);
+                lvH.setAdapter(hourAdapter);
+                //-----初始化主界面分钟列表----使用重写baseadapter方法
+                listMinuteItem = new LinkedList<>();
+                List<String[]> appTimeColor = new LinkedList<>();
+                listMinuteItem = date.glideMinuteDate(init, listMinuteItem, appTimeColor);
+                minuteAdapter = new MinuteAdapter(this, listMinuteItem);
+                lvM.setAdapter(minuteAdapter);
+
+                //TODO 下载服务器对于子账号数据填充
+
             }
         }
     }
@@ -1288,7 +1317,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 }*/
                 break;
             case R.id.image_defend_state:
-                Toast.makeText(MainActivity.this, "该服务未出售-暂时无法使用", Toast.LENGTH_LONG).show();
+                //Toast.makeText(MainActivity.this, "该服务未出售-暂时无法使用", Toast.LENGTH_LONG).show();
+                //TODO 账号匹配-(后面的onActivityResult里面处理)清空列表-下载对应账号的云端数据
+                //账号匹配
+                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                startActivityForResult(intent, 1);
+               /* if (loginResult.equals("True")){
+                    //清空列表
+                    Toast.makeText(MainActivity.this,"账号正确",Toast.LENGTH_SHORT).show();
+
+                }else {
+
+                }*/
                 break;
             //该服务未出售-暂时无法使用
 
@@ -1636,6 +1676,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         SimpleDateFormat nowDate = new SimpleDateFormat("yyyyMMdd");
         String tableName = nowDate.format(new Date()).toString();
         dbManager.addAppInfo(tableName, app);//存入每日数据库
+        dbManager.saveAppInfoCloud(tableName,app);//存入云端数据库
         appInfolist.add(app);
 
         String oneItem[] = new String[4];

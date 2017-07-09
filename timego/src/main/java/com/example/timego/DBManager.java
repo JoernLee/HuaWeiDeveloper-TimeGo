@@ -117,6 +117,24 @@ public class DBManager {
 
 
     }
+    public boolean saveAppInfoCloud(String table_name, AppInfo appInfo) {
+        table_name = "T20170708" ;//数据表名称不能以数字开头；
+        DBUtil dbUtil=new DBUtil();
+        String strTime=appInfo.getOpenTime();
+        String strName=appInfo.getAppLabel();
+        String strColor=appInfo.getAppColor().replace("#","");
+        String strRuntime=String.valueOf(appInfo.getRunTime());
+        String Pname="time#name#color#runtime";
+        String Pvalue=strTime+"#"+strName+"#"+strColor+"#"+strRuntime;
+        try {
+            dbUtil.insertPlatformListInfo( "car_solarsystem", table_name,Pname,Pvalue);
+        } catch (Exception e) {
+            return false;
+        }
+        return true;
+
+    }
+
 
     public void addAppInfoMonth(String table_name, String appname, String column_name, double sumTime) {
         // tryCreatTable();
