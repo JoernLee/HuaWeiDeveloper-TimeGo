@@ -223,6 +223,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 lvM.setAdapter(minuteAdapter);
 
                 //TODO 下载服务器对于子账号数据填充
+                DBUtil downDB = new DBUtil();
+                downDB.selectAllPlatformInfor(myhandler,"car_solarsystem","T20170708");
+
+
 
             }
         }
@@ -1318,7 +1322,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.image_defend_state:
                 //Toast.makeText(MainActivity.this, "该服务未出售-暂时无法使用", Toast.LENGTH_LONG).show();
-                //TODO 账号匹配-(后面的onActivityResult里面处理)清空列表-下载对应账号的云端数据
+                //TODO 跳入登陆界面
                 //账号匹配
                 Intent intent = new Intent(MainActivity.this, LoginActivity.class);
                 startActivityForResult(intent, 1);
@@ -2990,6 +2994,79 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     }
+
+    final Handler myhandler = new Handler() {
+        public void handleMessage(Message msg) {
+            if (msg.what == 0x123) {
+                Log.d(TAG, "handleMessage: timerin");
+                //接受是空的？？所以退出，直接添加没问题
+                ArrayList<String> drrayList = (ArrayList<String>) msg.obj;
+               /* ArrayList<String> drrayList = new ArrayList<>(10);
+                drrayList.add(0,"1");
+                drrayList.add(1,"2222");*/
+                if(!drrayList.isEmpty())
+                {
+                    int dataNum = drrayList.size() / 4;
+                    if (dataNum >= 0) {
+                        //TODO 利用读取数据做的事情-填充列表 0710
+                        //1.利用此数据修改AppTimeColor 数组
+                        List<String[]> appTimeColor = new LinkedList<>();
+                        for (int i = 0; i < dataNum ; i++){
+                            String oneItem[] = new String[4];
+                            oneItem[0] = drrayList.get(i*4 + 1);
+                            oneItem[1] = drrayList.get(i*4).split(" ")[0];
+                            oneItem[2] = drrayList.get(i*4).split(" ")[1];
+                            oneItem[3] = "#" + drrayList.get(i*4 + 2);
+                            appTimeColor.add(oneItem);
+                        }
+                        drrayList.removeAll(drrayList);
+                        //2.利用AppTimeColor进行分钟列表更新
+                        DateMain date = new DateMain(0);
+                        List<String[]> listMinuteItemChildren = new LinkedList<>();
+                        listMinuteItemChildren = date.glideMinuteDate(true, listMinuteItemChildren, appTimeColor);
+                        listMinuteItemChildren = date.glideMinuteDate(false, listMinuteItemChildren, appTimeColor);
+                        minuteAdapter = new MinuteAdapter(MainActivity.this, listMinuteItemChildren);
+                        lvM.setAdapter(minuteAdapter);
+                        //3.利用AppTimeColor进行小时列表更新
+                        final int hourTopWhiteBlock = 8;
+                        final int hourEndWhiteBlock = 8;
+                        List<String[]> listHourItemChildren = new LinkedList<>();
+                        listHourItemChildren = date.glideHourDate(true, listHourItemChildren, hourTopWhiteBlock, hourEndWhiteBlock, listMinuteItemChildren);
+                        listHourItemChildren = date.glideHourDate(false, listHourItemChildren, hourTopWhiteBlock, hourEndWhiteBlock, listMinuteItemChildren);
+                        HourAdapter hourAdapter = new HourAdapter(MainActivity.this, listHourItemChildren);
+                        lvH.setAdapter(hourAdapter);
+
+                       /* new Handler().postDelayed(new Runnable() {
+                            public void run() {
+                                //execute the task
+                                lvM.setSelection(4 * 24 * 60 + hour * 60 + minute - 8);
+                            }
+                        }, 10);*/
+
+
+
+                   /*     int size = selectAppListAll.size();
+        *//*String appTimeColor[][] = new String[size][4];*//*
+                        List<String[]> appTimeColor = new LinkedList<>();
+                        for (int i = 0; i < size; i++) {
+                            String oneItem[] = new String[4];
+                            AppInfo selectApp = selectAppListAll.get(i);
+                            oneItem[0] = selectApp.getAppLabel(); //10s扫描读到的appName
+                            String[] openTime = selectApp.getOpenTime().split(" ");
+                            oneItem[1] = openTime[0];//10s扫描读到的时间 - 日期
+                            oneItem[2] = openTime[1]; //10s扫描读到的时间 - 具体时间
+                            oneItem[3] = selectApp.getAppColor(); //10s扫描读到的app的color
+                            appTimeColor.add(oneItem);
+                        }*/
+                        // dataShow(drrayList);
+                    }
+                }
+
+            }
+
+        }
+    };
+
 }
 
 

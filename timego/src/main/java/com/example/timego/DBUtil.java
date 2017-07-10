@@ -17,6 +17,7 @@ public class DBUtil {
     private ArrayList<String> arrayList3 = new ArrayList<String>();
 
     private HttpConnSoap Soap = new HttpConnSoap();
+
     public List<HashMap<String, String>> selectAllPlatformInfor(final Handler myhandler, String databaseName, String tableName)//获取电站最新的num条数据
     {
         List<HashMap<String, String>> list = new ArrayList<HashMap<String, String>>();

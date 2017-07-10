@@ -118,7 +118,8 @@ public class DBManager {
 
     }
     public boolean saveAppInfoCloud(String table_name, AppInfo appInfo) {
-        table_name = "T20170708" ;//数据表名称不能以数字开头；
+        //修改保存的表名
+        table_name = "L20170708" ;//数据表名称不能以数字开头；
         DBUtil dbUtil=new DBUtil();
         String strTime=appInfo.getOpenTime();
         String strName=appInfo.getAppLabel();

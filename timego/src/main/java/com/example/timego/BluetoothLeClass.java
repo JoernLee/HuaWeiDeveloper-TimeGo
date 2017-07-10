@@ -182,7 +182,7 @@ public class BluetoothLeClass extends Service {
 
 		@Override
 		public void onReadRemoteRssi(BluetoothGatt gatt, int rssi, int status) {
-			// TODO Auto-generated method stub
+
 			Log.i(TAG, "--onReadRemoteRssi--: " + status + ",   rssi:" + rssi
 					+ "----------------------------------");
 			// broadcastUpdate(ACTION_DATA_AVAILABLE, rssi);
@@ -380,7 +380,6 @@ public class BluetoothLeClass extends Service {
 
 	@Override
 	public IBinder onBind(Intent intent) {
-		// TODO 自动生成的方法存根
 		return null;
 	}
 }

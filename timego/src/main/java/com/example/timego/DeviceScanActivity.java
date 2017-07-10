@@ -329,7 +329,6 @@ public class DeviceScanActivity extends ListActivity {
 		switch (requestCode) {
 			case PERMISSION_REQUEST_COARSE_LOCATION:
 				if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-					// TODO request success
 				}
 				break;
 		}
