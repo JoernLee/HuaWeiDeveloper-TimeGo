@@ -224,7 +224,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
                 //TODO 下载服务器对于子账号数据填充
                 DBUtil downDB = new DBUtil();
-                downDB.selectAllPlatformInfor(myhandler,"car_solarsystem","T20170708");
+                downDB.selectAllPlatformInfor(myhandler,"car_solarsystem","Y20170710");
 
 
 
@@ -3010,16 +3010,27 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     if (dataNum >= 0) {
                         //TODO 利用读取数据做的事情-填充列表 0710
                         //1.利用此数据修改AppTimeColor 数组
+                        //TODO 只提取前五天的数据
                         List<String[]> appTimeColor = new LinkedList<>();
                         for (int i = 0; i < dataNum ; i++){
                             String oneItem[] = new String[4];
-                            oneItem[0] = drrayList.get(i*4 + 1);
-                            oneItem[1] = drrayList.get(i*4).split(" ")[0];
-                            oneItem[2] = drrayList.get(i*4).split(" ")[1];
-                            oneItem[3] = "#" + drrayList.get(i*4 + 2);
-                            appTimeColor.add(oneItem);
+                            int startDay = Integer.parseInt(drrayList.get(i*4).split(" ")[0].split("-")[2]);
+                            int startMonth = Integer.parseInt(drrayList.get(i*4).split(" ")[0].split("-")[1]);
+                            int startYear = Integer.parseInt(drrayList.get(i*4).split(" ")[0].split("-")[0]);
+                            boolean fixable = isFiveDayInclude(startYear,startMonth,startDay);
+                            //判断日期范围
+                            if (fixable){
+                                oneItem[0] = drrayList.get(i*4 + 1);
+                                oneItem[1] = drrayList.get(i*4).split(" ")[0];
+                                oneItem[2] = drrayList.get(i*4).split(" ")[1];
+                                oneItem[3] = "#" + drrayList.get(i*4 + 2);
+                                appTimeColor.add(oneItem);
+                            }else {
+                                continue;
+                            }
                         }
                         drrayList.removeAll(drrayList);
+
                         //2.利用AppTimeColor进行分钟列表更新
                         DateMain date = new DateMain(0);
                         List<String[]> listMinuteItemChildren = new LinkedList<>();
@@ -3027,6 +3038,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         listMinuteItemChildren = date.glideMinuteDate(false, listMinuteItemChildren, appTimeColor);
                         minuteAdapter = new MinuteAdapter(MainActivity.this, listMinuteItemChildren);
                         lvM.setAdapter(minuteAdapter);
+
                         //3.利用AppTimeColor进行小时列表更新
                         final int hourTopWhiteBlock = 8;
                         final int hourEndWhiteBlock = 8;
@@ -3066,7 +3078,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         }
     };
-
+    public boolean isFiveDayInclude(int year,int month, int day){
+        boolean result = true;
+        Calendar calToday=Calendar.getInstance();
+        int today = calToday.get(Calendar.DAY_OF_MONTH);
+        int tomonth = calToday.get(Calendar.MONTH)+1;
+        int toyear = calToday.get(Calendar.YEAR);
+        //同一个月分析
+        if(tomonth==month)
+        {
+           if (today - day <= 4){
+               result = true;
+           }else {
+               result = false;
+           }
+        }else if (tomonth!=month && toyear == year){
+            //非同一个月但是同一年
+            Calendar calToday1=Calendar.getInstance();
+            calToday1.add(Calendar.MONTH,-1);
+            int dayNUm=calToday1.getActualMaximum(Calendar.DATE);
+            if ((dayNUm+today) - day <=4){
+                result = true;
+            }else {
+                result = false;
+            }
+        }
+        return result;
+    }
 }
 
 

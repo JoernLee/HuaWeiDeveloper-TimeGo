@@ -35,8 +35,8 @@ public class LoginActivity extends AppCompatActivity{
     public void onClick(View v){
         switch (v.getId()) {
             case R.id.login:
-                if (Objects.equals(account.getText().toString(),"li")){
-                    if (Objects.equals(password.getText().toString(), "123")){
+                if (Objects.equals(account.getText().toString(),"fxteam")){
+                    if (Objects.equals(password.getText().toString(), "123456")){
                         Toast.makeText(LoginActivity.this,"账号密码正确-即将显示子账号App使用信息",Toast.LENGTH_LONG).show();
                         Intent intent = new Intent();
                         intent.putExtra("result_return", "True");
